@@ -1,4 +1,4 @@
-package main.app_gestion_turnos.entities;
+package entities;
 
 import jakarta.persistence.*;
 import java.util.List;

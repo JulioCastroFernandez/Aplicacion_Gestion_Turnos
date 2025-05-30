@@ -1,4 +1,4 @@
-package main.app_gestion_turnos.entities;
+package entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,18 +14,18 @@ public class Turno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String identificadorProgresivo;
+    private Long identificadorProgresivo;
     private LocalDate fecha;
     private String estado;
 
-@ManyToOne
-@JoinColumn(name = "ciudadano_id") //Nombre de la columna de la FK (Foreign Key) en la tabla Turno.
-private Ciudadano ciudadano;
+    @ManyToOne
+    @JoinColumn(name = "ciudadano_id") //Nombre de la columna de la FK (Foreign Key) en la tabla Turno.
+    private Ciudadano ciudadano;
 
     public Turno() {
     }
 
-    public Turno(Long id, String identificadorProgresivo, LocalDate fecha, String estado, Ciudadano ciudadano) {
+    public Turno(Long id, Long identificadorProgresivo, LocalDate fecha, String estado, Ciudadano ciudadano) {
         this.id = id;
         this.identificadorProgresivo = identificadorProgresivo;
         this.fecha = fecha;
@@ -41,11 +41,11 @@ private Ciudadano ciudadano;
         this.id = id;
     }
 
-    public String getIdentificadorProgresivo() {
+    public Long getIdentificadorProgresivo() {
         return identificadorProgresivo;
     }
 
-    public void setIdentificadorProgresivo(String identificadorProgresivo) {
+    public void setIdentificadorProgresivo(Long identificadorProgresivo) {
         this.identificadorProgresivo = identificadorProgresivo;
     }
 

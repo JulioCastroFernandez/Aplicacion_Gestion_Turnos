@@ -1,10 +1,8 @@
-package main.app_gestion_turnos.persistencia;
+package persistence;
 
 import jakarta.persistence.*;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Root;
-import main.app_gestion_turnos.entities.Ciudadano;
-import main.app_gestion_turnos.entities.Turno;
+import entities.*;
+
 
 import java.util.List;
 
@@ -183,5 +181,4 @@ public class ControladorPersistencia {
             em.close();
         }
     }
-
 }
