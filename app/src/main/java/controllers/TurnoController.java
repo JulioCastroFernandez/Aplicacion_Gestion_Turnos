@@ -5,6 +5,7 @@ import entities.Turno;
 import persistence.ControladorPersistencia;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 
 public class TurnoController {
@@ -36,13 +37,13 @@ public class TurnoController {
         }
     }
 
-    public List<Turno> listarTurnos(LocalDate fechaBuscada){
+    public List<Turno> listarTurnos(LocalDate fechaBuscada, String estado){
         List<Turno> lista = cp.buscarTodosLosTurno();
         List<Turno> listaFiltrada = lista.stream()
                 .filter(t->t.getFecha().equals(fechaBuscada))
-                .sorted((t1, t2)->Long.compare(t1.getIdentificadorProgresivo(), t2.getIdentificadorProgresivo()))
+                .sorted(Comparator.comparingLong(Turno::getIdentificadorProgresivo))
                 .toList();
-        System.out.println("Listado de turnos por fecha:" + fechaBuscada);
+        System.out.println("Listado de turnos por fecha:" + fechaBuscada + " y estado: " + estado);
         listaFiltrada.forEach(System.out::println);
         return listaFiltrada;
     }
