@@ -1,0 +1,97 @@
+
+        html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* buena práctica para controlar tamaños */
+}
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 0px;
+            padding-left: 30px;
+            padding-right: 20px;
+            background-color: rgb(130, 135, 238);
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        .menu .titulo {
+              font-size: 24px;
+              font-weight: 700;
+              color: #ffeb3b;
+              text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+              margin-right: 40px;
+             user-select: none;
+        }
+
+        input {
+            background-color: #FFFFFF;
+            color: #333333;
+            border: 2px solid #0056b3; /* azul más oscuro que el fondo */
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-top: 3px;
+    }
+    .menu ul li a {
+    color:  #FFFFFF;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+form.search {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 8px;
+    gap: 15px;
+}
+
+form.search input {
+    border: 2px solid #0056b3;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #333;
+    outline-offset: 2px;
+    transition: border-color 0.3s ease;
+    min-width: 180px;
+}
+
+form.search input:focus {
+    border-color: #c1ed25;
+    box-shadow: 0 0 5px #c1ed25;
+}
+form.search button {
+    background-color: #fbc02d;
+    color: #283593;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 3px 6px rgba(251, 192, 45, 0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form.search button:hover {
+    background-color: #f9a825;
+    box-shadow: 0 4px 8px rgba(249, 168, 37, 0.8);
+}
