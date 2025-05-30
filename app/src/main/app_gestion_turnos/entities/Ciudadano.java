@@ -1,7 +1,6 @@
 package main.app_gestion_turnos.entities;
 
 import jakarta.persistence.*;
-
 import java.util.List;
 
 @Entity  //Con esto indico que esta clase es una entidad JPA y se mapeara en una tabla
