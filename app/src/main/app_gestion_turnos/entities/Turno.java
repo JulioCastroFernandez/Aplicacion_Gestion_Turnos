@@ -1,4 +1,4 @@
-package main.app_gestion_turnos.logica;
+package main.app_gestion_turnos.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

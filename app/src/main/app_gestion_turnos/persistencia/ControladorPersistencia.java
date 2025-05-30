@@ -6,7 +6,7 @@ import jakarta.persistence.Persistence;
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
-import main.app_gestion_turnos.logica.Turno;
+import main.app_gestion_turnos.entities.Turno;
 
 import java.util.List;
 
