@@ -1,4 +1,4 @@
-package main.app_gestion_turnos.entities;
+package entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -18,9 +18,9 @@ public class Turno {
     private LocalDate fecha;
     private String estado;
 
-@ManyToOne
-@JoinColumn(name = "ciudadano_id") //Nombre de la columna de la FK (Foreign Key) en la tabla Turno.
-private Ciudadano ciudadano;
+    @ManyToOne
+    @JoinColumn(name = "ciudadano_id") //Nombre de la columna de la FK (Foreign Key) en la tabla Turno.
+    private Ciudadano ciudadano;
 
     public Turno() {
     }
