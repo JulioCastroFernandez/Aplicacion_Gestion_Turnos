@@ -7,12 +7,12 @@
 </head>
 <body>
  <%@include file ="partials/header.jsp" %>
+    <!-- Menú de navegación -->
 
 
 
 
-  <h2 class="titulo">listar turnos</h2>
-
+  <h2 class="titulo">lista de ciudadanos</h2>
 
 </main>
 

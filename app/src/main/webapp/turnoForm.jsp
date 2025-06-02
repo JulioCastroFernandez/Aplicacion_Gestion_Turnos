@@ -12,7 +12,7 @@
 
 
 
-  <h2 class="titulo">nuevos  turnos</h2>
+  <h2 class="titulo">nuevo turno</h2>
 
 
 </main>
