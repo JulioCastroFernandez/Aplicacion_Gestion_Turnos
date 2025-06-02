@@ -82,7 +82,7 @@
                     position: absolute;
                     top: 190%;
                     left: 0;
-                    background-color: rgb(189, 192, 250);
+                    background-color: rgb(130, 135, 238);
                     padding: 0;
                     margin: 0;
                     list-style: none;
@@ -229,6 +229,7 @@
                         /* Submenús para móvil */
                         .menu ul li .submenu {
                             position: static;
+                            background-color: rgb(189, 192, 250);
                             box-shadow: none;
                             display: none;
                             padding-left: 20px;
