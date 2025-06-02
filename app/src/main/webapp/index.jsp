@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Inicio</title>
-       <link rel="stylesheet" href="public/css/estilosCabecera.css">
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    
-    <%@include file ="partials/mavegacion.jsp" %>
+ <%@include file ="partials/header.jsp" %>
+    <!-- Menú de navegación -->
 
-    <main>
-           <p>Contenido principal de la página.</p>
-    </main>
+ <main>
+
+</main>
 
 </body>
 </html>
