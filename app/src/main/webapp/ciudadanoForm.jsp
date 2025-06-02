@@ -10,7 +10,19 @@
     <!-- Menú de navegación -->
 
  <main>
-  <h2 class="titulo">nuevo ciudadano</h2>
+    <h2 class="titulo" style="margin-left: 30px;">Nuevo ciudadano</h2>
+
+    <form action="#" method="post" class="form_app">
+      <label for="dni">DNI:</label>
+      <input type="dni" id="dni" name="dni" required>
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+
+      <button type="submit" class="boton-nuevo">Nuevo</button>
+    </form>
 </main>
 
 </body>
