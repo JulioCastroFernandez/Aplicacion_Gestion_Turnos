@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ page import="java.util.List, entities.Ciudadano" %>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -19,12 +20,20 @@
   <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
 
    <label for="estado">Estado de turno:</label>
-  <select id="estado-turno" name="tipo-turno" required class="select-turno">
+  <select id="estado-turno" name="tipo-turno" required class="select">
     <option value="" disabled selected>Estado turno</option>
     <option value="mañana">En espera</option>
     <option value="tarde">Ya atendido</option>
   </select>
 
+   <label for="estado">Ciudadano:</label>
+  <select id="seccionar-ciudadano" name="ciudadano" required class="select">
+    <option value="" disabled selected>Ciudadano</option>
+      <% List<Ciudadano> listado = (List<Ciudadano>) request.getAttribute("listado");
+              for (Ciudadano persona: listado) { %>
+                 <option value="<%= persona.getId() %>"><%= persona.getNombre() %></option>
+              <% } %>
+  </select>
   <button type="submit" class="boton-nuevo">Nuevo</button>
 </form>
 
