@@ -15,6 +15,7 @@ public class turnosFormServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        //devolvemoa a la vista
         req.getRequestDispatcher("turnoForm.jsp").forward(req, resp);
     }
 }
