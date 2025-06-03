@@ -12,7 +12,7 @@
  <main>
     <h2 class="titulo" style="margin-left: 30px;">Nuevo ciudadano</h2>
 
-    <form action="#" method="post" class="form_app">
+    <form action="ciudadanoForm" method="post" class="form_app">
       <label for="dni">DNI:</label>
       <input type="dni" id="dni" name="dni" required>
 

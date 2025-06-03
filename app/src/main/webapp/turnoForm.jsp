@@ -11,7 +11,7 @@
    <h2 class="titulo" style="margin-left: 30px;">Nuevo turno</h2>
 
 
-<form action="#" method="post" class="form_app">
+<form action="/app/turnoForm" method="post" class="form_app">
   <label for="fecha">Fecha:</label>
   <input type="date" id="fecha" name="fecha" required>
 

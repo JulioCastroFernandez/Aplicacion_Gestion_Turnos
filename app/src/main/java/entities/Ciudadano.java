@@ -17,7 +17,7 @@ public class Ciudadano {
     //Relación One-to-many: Un ciudadano puede tener varios turnos.
     //Con mappedBy indicamos el campo en la entidad "Turno" que es dueño de la relación.
     //CascadeType.All significa que operaciones (persist, remove) en Ciudadano se propagarán a sus Turnos asociados.
-    @OneToMany(mappedBy = "ciudadano", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "ciudadano", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Turno> listaTurnos;
 
     //Constructores, getters y setters.
