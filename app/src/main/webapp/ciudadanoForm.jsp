@@ -14,7 +14,7 @@
 
     <form action="ciudadanoForm" method="post" class="form_app">
       <label for="dni">DNI:</label>
-      <input type="dni" id="dni" name="dni" required>
+      <input type="dni" id="dni" placeholder="Tu dni" name="dni" required>
 
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
