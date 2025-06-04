@@ -22,8 +22,8 @@
             </li>
         </ul>
 
-        <form class="search" action="#" method="#">
-            <input type="text" placeholder="Buscar turno" name="TurnoBuscado">
+        <form class="search" action="/app/busquedaForm" method="POST">
+            <input type="text" placeholder="Turno, por fecha" name="turnoBuscado">
             <button type="submit">Buscar</button>
         </form>
     </nav>
