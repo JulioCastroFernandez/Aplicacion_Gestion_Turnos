@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ page import = "java.util.List, entities.Turno" %>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -21,12 +22,17 @@
        </thead>
 
        <tbody>
-           <tr>
-             <td style="padding: 8px; border: 1px solid #ddd;">Ejemplo identificado</td>
-             <td style="padding: 8px; border: 1px solid #ddd;">fecha</td>
-             <td style="padding: 8px; border: 1px solid #ddd;">estado</td>
-              <td style="padding: 8px; border: 1px solid #ddd;">ciudadano</td>
-           </tr>
+
+         <% List<Turno> listado = (List<Turno>) request.getAttribute("listado");
+                for (Turno turno: listado) { %>
+                          <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><%= turno.getId() %></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><%= turno.getFecha() %></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><%= turno.getEstado() %></td>
+                            <td style="padding: 8px; border: 1px solid #ddd;"><%= turno.getCiudadano().getNombre()%></td>
+                        </tr>
+                <% } %>
+
        </tbody>
    </table>
 </main>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ page import="java.util.List, entities.Ciudadano" %>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -21,11 +22,16 @@
        </thead>
 
        <tbody>
-           <tr>
-             <td style="padding: 8px; border: 1px solid #ddd;">Ejemplo DNI</td>
-             <td style="padding: 8px; border: 1px solid #ddd;">Ejemplo Nombre</td>
-             <td style="padding: 8px; border: 1px solid #ddd;">Ejemplo Apellido</td>
-           </tr>
+
+           <% List<Ciudadano> listado = (List<Ciudadano>) request.getAttribute("listado");
+            for (Ciudadano persona: listado) { %>
+                  <tr>
+                     <td style="padding: 8px; border: 1px solid #ddd;"><%= persona.getDni() %></td>
+                     <td style="padding: 8px; border: 1px solid #ddd;"><%= persona.getNombre() %></td>
+                     <td style="padding: 8px; border: 1px solid #ddd;"><%= persona.getApellido() %></td>
+                 </tr>
+           <% } %>
+
        </tbody>
    </table>
 </main>

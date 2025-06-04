@@ -1,5 +1,4 @@
 package servlets;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -14,7 +13,7 @@ public class turnosServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //devolvemoa a la vista
+        //devolvemos la vista
         req.getRequestDispatcher("listaTurnos.jsp").forward(req, resp);
     }
 
