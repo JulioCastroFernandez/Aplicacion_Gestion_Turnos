@@ -14,7 +14,7 @@ public class Turno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long identificadorProgresivo;
+    private String identificadorProgresivo;
     private LocalDate fecha;
     private String estado;
 
@@ -25,7 +25,7 @@ public class Turno {
     public Turno() {
     }
 
-    public Turno(Long id, Long identificadorProgresivo, LocalDate fecha, String estado, Ciudadano ciudadano) {
+    public Turno(Long id, String identificadorProgresivo, LocalDate fecha, String estado, Ciudadano ciudadano) {
         this.id = id;
         this.identificadorProgresivo = identificadorProgresivo;
         this.fecha = fecha;
@@ -41,11 +41,11 @@ public class Turno {
         this.id = id;
     }
 
-    public Long getIdentificadorProgresivo() {
+    public String getIdentificadorProgresivo() {
         return identificadorProgresivo;
     }
 
-    public void setIdentificadorProgresivo(Long identificadorProgresivo) {
+    public void setIdentificadorProgresivo(String identificadorProgresivo) {
         this.identificadorProgresivo = identificadorProgresivo;
     }
 
