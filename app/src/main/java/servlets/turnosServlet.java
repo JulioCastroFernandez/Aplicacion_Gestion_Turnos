@@ -19,8 +19,7 @@ public class turnosServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String fechaBuscadaString = req.getParameter("fecha");
-        String estado = req.getParameter("estado");
+
 
         List<Turno> filtrados = turnoController.listarTodosTurnos();
 
