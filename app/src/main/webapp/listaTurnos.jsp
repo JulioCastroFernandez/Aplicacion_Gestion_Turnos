@@ -16,8 +16,8 @@
    %>
    <select id="estado-turno" name="estado" class="select">
        <option value="" disabled <%= (estadoSeleccionado == null || estadoSeleccionado.isBlank()) ? "selected" : "" %>>Estado turno</option>
-       <option value="en-espera" <%= "en-espera".equals(estadoSeleccionado) ? "selected" : "" %>>En espera</option>
-       <option value="ya-atendido" <%= "ya-atendido".equals(estadoSeleccionado) ? "selected" : "" %>>Ya atendido</option>
+       <option value="en espera" <%= "en espera".equals(estadoSeleccionado) ? "selected" : "" %>>en espera</option>
+       <option value="ya atendido" <%= "ya atendido".equals(estadoSeleccionado) ? "selected" : "" %>>ya atendido</option>
    </select>
              <input type="date" id="fecha" name="fecha" value ="<%= request.getAttribute("fecha") != null ? request.getAttribute("fecha") : "" %>">
             <button type="submit">Buscar</button>

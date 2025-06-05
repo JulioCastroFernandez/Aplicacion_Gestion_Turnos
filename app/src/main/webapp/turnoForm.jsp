@@ -19,8 +19,8 @@
    <label for="estado">Estado de turno:</label>
   <select id="estado-turno" name="tipo-turno" required class="select">
     <option value="" disabled selected>Estado turno</option>
-    <option value="mañana">En espera</option>
-    <option value="tarde">Ya atendido</option>
+    <option value="en espera">En espera</option>
+    <option value="ya atendido">Ya atendido</option>
   </select>
 
    <label for="estado">Ciudadano:</label>
