@@ -16,9 +16,6 @@
   <label for="fecha">Fecha:</label>
   <input type="date" id="fecha" name="fecha" required>
 
-  <label for="nombre">Ciudadano:</label>
-  <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-
    <label for="estado">Estado de turno:</label>
   <select id="estado-turno" name="tipo-turno" required class="select">
     <option value="" disabled selected>Estado turno</option>
