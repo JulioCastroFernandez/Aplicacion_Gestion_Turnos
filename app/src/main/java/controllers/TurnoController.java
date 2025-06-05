@@ -40,6 +40,13 @@ public class TurnoController {
     }
 
     // METODO para listar los turnos
+    public List<Turno> listarTodosTurnos() {
+        List<Turno> lista = cp.buscarTodosLosTurno();
+
+        lista.forEach(System.out::println);
+        return lista;
+    }
+
     public List<Turno> listarTurnos(LocalDate fechaBuscada, String estado) {
         List<Turno> lista = cp.buscarTodosLosTurno();
         List<Turno> listaFiltrada = lista.stream()
