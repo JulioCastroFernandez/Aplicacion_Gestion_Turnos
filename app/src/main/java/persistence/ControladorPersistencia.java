@@ -7,14 +7,15 @@ import entities.*;
 import java.util.List;
 
 public class ControladorPersistencia {
-    private EntityManagerFactory emf = null; //Se encarga de crear instancias de EntityManager.
 
-    public ControladorPersistencia(){
-        emf = Persistence.createEntityManagerFactory("gestionturno");
+    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("gestionturno");
+
+    public static EntityManager getEntityManager() {
+        return emf.createEntityManager();
     }
 
-    private EntityManager getEntityManager(){
-        return emf.createEntityManager();
+    public static void close() {
+        emf.close();
     }
 
     // --- Metodos CRUD para la clase Turno ---
