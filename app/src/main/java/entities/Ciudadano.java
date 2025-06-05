@@ -71,4 +71,15 @@ public class Ciudadano {
     public void setListaTurnos(List<Turno> listaTurnos) {
         this.listaTurnos = listaTurnos;
     }
+
+    @Override
+    public String toString() {
+        return "Ciudadano{" +
+                "id=" + id +
+                ", dni='" + dni + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", listaTurnos=" + listaTurnos +
+                '}';
+    }
 }
