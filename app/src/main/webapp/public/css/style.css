@@ -118,9 +118,13 @@
             form.search {
                 display: flex;
                 align-items: center;
+                padding-left: 1050px;
+                padding-bottom: 400px;
                 padding: 6px 12px;
                 border-radius: 8px;
                 gap: 15px;
+                padding-left: 1050px;
+                  padding-bottom: 30px;
             }
 
                 form.search input {
