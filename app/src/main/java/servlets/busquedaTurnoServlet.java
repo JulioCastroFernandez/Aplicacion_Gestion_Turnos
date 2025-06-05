@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.List;
 @WebServlet(urlPatterns = "/busquedaForm")
 public class busquedaTurnoServlet extends HttpServlet {
@@ -24,17 +25,21 @@ public class busquedaTurnoServlet extends HttpServlet {
         boolean tieneFecha = fechaBuscadaString != null && !fechaBuscadaString.isBlank();
         boolean tieneEstado = estado != null && !estado.isBlank();
 
-        LocalDate fechaBuscada = LocalDate.parse(fechaBuscadaString);
-        if (tieneFecha && tieneEstado) {
-            filtrados = turnoController.listarTurnos(fechaBuscada, estado);
-        } else if (!tieneFecha && !tieneEstado) {
-            filtrados = turnoController.listarTodosTurnos();
-        } else if (tieneFecha) {
-            filtrados = turnoController.listarPorFecha(fechaBuscada);
-        } else {
-            filtrados = turnoController.listarPorEstado(estado);
+        try {
+            if (tieneFecha && tieneEstado) {
+                LocalDate fechaBuscada = LocalDate.parse(fechaBuscadaString);
+                filtrados = turnoController.listarTurnos(fechaBuscada, estado);
+            } else if (!tieneFecha && !tieneEstado) {
+                filtrados = turnoController.listarTodosTurnos();
+            } else if (tieneFecha) {
+                LocalDate fechaBuscada = LocalDate.parse(fechaBuscadaString);
+                filtrados = turnoController.listarPorFecha(fechaBuscada);
+            } else if (tieneEstado) {
+                filtrados = turnoController.listarPorEstado(estado);
+            }
+        } catch (DateTimeParseException e) {
+            req.setAttribute("error", "La fecha ingresada no tiene un formato válido (aaaa-mm-dd)");
         }
-
 
 
         req.setAttribute("estado", estado);
