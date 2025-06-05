@@ -72,4 +72,15 @@ public class Turno {
     public void setCiudadano(Ciudadano ciudadano) {
         this.ciudadano = ciudadano;
     }
+
+    @Override
+    public String toString() {
+        return "Turno{" +
+                "id=" + id +
+                ", identificadorProgresivo=" + identificadorProgresivo +
+                ", fecha=" + fecha +
+                ", estado='" + estado + '\'' +
+                ", ciudadano=" + ciudadano +
+                '}';
+    }
 }
