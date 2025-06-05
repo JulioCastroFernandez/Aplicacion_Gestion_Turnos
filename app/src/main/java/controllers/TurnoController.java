@@ -90,7 +90,7 @@ public class TurnoController {
         List<Turno> lista = cp.buscarTodosLosTurno();
         List<Turno> listaFiltrada = lista.stream()
                 .filter(t -> t.getEstado().equalsIgnoreCase(estado)).toList();
-        System.out.println("Listado de turnos por fecha:" + estado );
+        System.out.println("Listado de turnos por estado:" + estado );
 
         listaFiltrada.forEach(System.out::println);
         return listaFiltrada;
