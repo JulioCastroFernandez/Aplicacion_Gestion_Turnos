@@ -17,18 +17,32 @@ public class busquedaTurnoServlet extends HttpServlet {
     private final TurnoController turnoController = new TurnoController();
     protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
 
-        // fecha buscada
-        LocalDate fechaBuscada = LocalDate.parse(req.getParameter("turnoBuscado"));
+        String fechaBuscadaString = req.getParameter("fecha");
+        String estado = req.getParameter("estado");
 
-        //obtener la lista filtrada
-        List<Turno> listaFiltrada = turnoController.listarTurnos(fechaBuscada,"tarde");
-        System.out.println(listaFiltrada.get(0).getCiudadano());
-        req.setAttribute("listado",listaFiltrada);
+        List<Turno> filtrados = List.of();
+        boolean tieneFecha = fechaBuscadaString != null && !fechaBuscadaString.isBlank();
+        boolean tieneEstado = estado != null && !estado.isBlank();
+
+        LocalDate fechaBuscada = LocalDate.parse(fechaBuscadaString);
+        if (tieneFecha && tieneEstado) {
+            filtrados = turnoController.listarTurnos(fechaBuscada, estado);
+        } else if (!tieneFecha && !tieneEstado) {
+            filtrados = turnoController.listarTodosTurnos();
+        } else if (tieneFecha) {
+            filtrados = turnoController.listarPorFecha(fechaBuscada);
+        } else {
+            filtrados = turnoController.listarPorEstado(estado);
+        }
+
+
+
+        req.setAttribute("estado", estado);
+        req.setAttribute("fecha",fechaBuscadaString);
+        req.setAttribute("listado", filtrados);
+        //devolvemos la vista
 
         req.getRequestDispatcher("listaTurnos.jsp").forward(req,response);
-
-
-
 
 
     }

@@ -8,6 +8,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.List;
 
 @WebServlet(urlPatterns = "/listaTurnos")
@@ -17,9 +19,13 @@ public class turnosServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        List<Turno> todos = turnoController.listarTodosTurnos();
+        String fechaBuscadaString = req.getParameter("fecha");
+        String estado = req.getParameter("estado");
 
-        req.setAttribute("listado", todos);
+        List<Turno> filtrados = turnoController.listarTodosTurnos();
+
+
+        req.setAttribute("listado", filtrados);
         //devolvemos la vista
         req.getRequestDispatcher("listaTurnos.jsp").forward(req, resp);
     }
