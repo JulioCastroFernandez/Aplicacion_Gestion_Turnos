@@ -77,7 +77,7 @@ public class Turno {
     public String toString() {
         return "Turno{" +
                 "id=" + id +
-                ", identificadorProgresivo=" + identificadorProgresivo +
+                ", identificadorProgresivo='" + identificadorProgresivo + '\'' +
                 ", fecha=" + fecha +
                 ", estado='" + estado + '\'' +
                 ", ciudadano=" + ciudadano +
