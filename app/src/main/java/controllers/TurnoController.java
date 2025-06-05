@@ -36,21 +36,24 @@ public class TurnoController {
         String caracteres = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ0123456789";
         Random random = new Random();
 
+        String nuevoId;
         boolean existeId;
 
-        do{
+        do {
             StringBuilder stringBuilder = new StringBuilder();
             for (int i = 0; i < 5; i++) {
                 stringBuilder.append(caracteres.charAt(random.nextInt(caracteres.length())));
             }
-            String nuevoId = stringBuilder.toString();
+            nuevoId = stringBuilder.toString();
 
             // Verificamos si existe el id generado en algún turno
+            String finalNuevoId = nuevoId;
             existeId = turnoList.stream()
-                    .anyMatch(t -> t.getIdentificadorProgresivo().equals(nuevoId));
-            if(existeId)
-                return nuevoId;
-        } while (true);
+                    .anyMatch(t -> t.getIdentificadorProgresivo().equals(finalNuevoId));
+
+        } while (existeId);  // Si el id existe, repite el bucle
+
+        return nuevoId;  // Solo devolvemos un id válido, que no exista
     }
 
     // METODO para listar los turnos
