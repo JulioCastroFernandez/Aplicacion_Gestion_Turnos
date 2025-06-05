@@ -21,14 +21,7 @@
                 </ul>
             </li>
         </ul>
-
-        <form class="search" action="/app/busquedaForm" method="POST">
-            <input type="text" placeholder="Turno, por fecha" name="turnoBuscado">
-            <button type="submit">Buscar</button>
-        </form>
     </nav>
-
-
     <script>
         const toggle = document.querySelector('.menu-toggle');
         const navItems = document.querySelector('.nav-items');
