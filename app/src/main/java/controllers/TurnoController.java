@@ -74,4 +74,25 @@ public class TurnoController {
             System.out.println("No se encontró el turno con el ID: " + id);
         }
     }
+
+    public List<Turno> listarPorFecha(LocalDate fechaBuscada) {
+
+        List<Turno> lista = cp.buscarTodosLosTurno();
+        List<Turno> listaFiltrada = lista.stream()
+                .filter(t -> t.getFecha().equals(fechaBuscada)).toList();
+        System.out.println("Listado de turnos por fecha:" + fechaBuscada );
+        listaFiltrada.forEach(System.out::println);
+        return listaFiltrada;
+    }
+
+    public List<Turno> listarPorEstado(String estado) {
+
+        List<Turno> lista = cp.buscarTodosLosTurno();
+        List<Turno> listaFiltrada = lista.stream()
+                .filter(t -> t.getEstado().equalsIgnoreCase(estado)).toList();
+        System.out.println("Listado de turnos por fecha:" + estado );
+
+        listaFiltrada.forEach(System.out::println);
+        return listaFiltrada;
+    }
 }
