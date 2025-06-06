@@ -28,7 +28,7 @@ Requisitos e instrucciones para poder ejecutar la aplicación correctamente en t
 3. Selecciona "Open as a Project".
 
 
-**** 4. Ejecutar el servidor 
+**** 4. Ejecutar el servidor ****
 
 1. Usa Tomcat dentro de IntelliJ.
 2. Compila y despliega el proyecto.
@@ -49,9 +49,11 @@ Una vez accedas a la WebApp te encontraras con al pantalla inicio. La pantalla i
 Ahora vamos a explicar cada opción por separado:
 
 **** 1. Inicio ****
+
 Al hacer click, nos devuelve a la pantalla de inicio de la WebApp.
 
 **** 2. Turno ****
+
 Al pasar el ratón por encima desplegara las dos opciones disponibles.
 
 a. Nuevo turno: Al hacer click en esta opción accederemos al formulario para crear un nuevo turno en la BD.
@@ -59,6 +61,7 @@ a. Nuevo turno: Al hacer click en esta opción accederemos al formulario para cr
 b. Lista de turnos: Al hacer click en esta opción accederemos a la lista de turnos que hay en la BD.
 
 **** 3. Ciudadano ****
+
 Al pasar el ratón por encima desplegara las dos opciones disponibles.
 
 a. Nuevo ciudadano: Al hacer click en esta opción accederemos al formulario para añadir a un nuevo ciudadano a la BD.
