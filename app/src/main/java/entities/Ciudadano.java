@@ -71,4 +71,5 @@ public class Ciudadano {
     public void setListaTurnos(List<Turno> listaTurnos) {
         this.listaTurnos = listaTurnos;
     }
+    
 }

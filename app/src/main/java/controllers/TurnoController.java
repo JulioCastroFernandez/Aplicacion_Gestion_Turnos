@@ -7,6 +7,7 @@ import persistence.ControladorPersistencia;
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 
 public class TurnoController {
     ControladorPersistencia cp = new ControladorPersistencia();
@@ -15,7 +16,7 @@ public class TurnoController {
     public void crearTurno(String estado, LocalDate fecha, Long id) {
         Ciudadano ciudadano = cp.buscarCiudadanoPorID(id);
         if (ciudadano != null) {
-            Long idProgresivo = generarIdProgresivo(ciudadano);
+            String idProgresivo = generarIdProgresivo(ciudadano);
             Turno turno = new Turno();
             turno.setIdentificadorProgresivo(idProgresivo);
             turno.setFecha(fecha);
@@ -30,13 +31,29 @@ public class TurnoController {
     }
 
     // METODO para generar un ID progresivo
-    public Long generarIdProgresivo(Ciudadano ciudadano) {
+    public String generarIdProgresivo(Ciudadano ciudadano) {
         List<Turno> turnoList = ciudadano.getListaTurnos();
-        if (turnoList != null) {
-            return (long) (turnoList.size() + 1000);
-        } else {
-            return 1000L;
-        }
+        String caracteres = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ0123456789";
+        Random random = new Random();
+
+        String nuevoId;
+        boolean existeId;
+
+        do {
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < 5; i++) {
+                stringBuilder.append(caracteres.charAt(random.nextInt(caracteres.length())));
+            }
+            nuevoId = stringBuilder.toString();
+
+            // Verificamos si existe el id generado en algún turno
+            String finalNuevoId = nuevoId;
+            existeId = turnoList.stream()
+                    .anyMatch(t -> t.getIdentificadorProgresivo().equals(finalNuevoId));
+
+        } while (existeId);  // Si el id existe, repite el bucle
+
+        return nuevoId;  // Solo devolvemos un id válido, que no exista
     }
 
     // METODO para listar los turnos
@@ -47,12 +64,35 @@ public class TurnoController {
         return lista;
     }
 
+    // METODO para listar los turnos por fecha
+    public List<Turno> listarPorFecha(LocalDate fechaBuscada) {
+
+        List<Turno> lista = cp.buscarTodosLosTurno();
+        List<Turno> listaFiltrada = lista.stream()
+                .filter(t -> t.getFecha().equals(fechaBuscada)).toList();
+        System.out.println("Listado de turnos por fecha:" + fechaBuscada );
+        listaFiltrada.forEach(System.out::println);
+        return listaFiltrada;
+    }
+
+    // METODO para listar los turnos por estado
+    public List<Turno> listarPorEstado(String estado) {
+
+        List<Turno> lista = cp.buscarTodosLosTurno();
+        List<Turno> listaFiltrada = lista.stream()
+                .filter(t -> t.getEstado().equalsIgnoreCase(estado)).toList();
+        System.out.println("Listado de turnos por estado:" + estado );
+
+        listaFiltrada.forEach(System.out::println);
+        return listaFiltrada;
+    }
+
     public List<Turno> listarTurnos(LocalDate fechaBuscada, String estado) {
         List<Turno> lista = cp.buscarTodosLosTurno();
         List<Turno> listaFiltrada = lista.stream()
                 .filter(t -> t.getFecha().equals(fechaBuscada) &&
                         t.getEstado().equalsIgnoreCase(estado))
-                .sorted(Comparator.comparingLong(Turno::getIdentificadorProgresivo))
+                .sorted(Comparator.comparing(Turno::getIdentificadorProgresivo))
                 .toList();
         System.out.println("Listado de turnos por fecha:" + fechaBuscada + " y estado: " + estado);
         listaFiltrada.forEach(System.out::println);
@@ -73,26 +113,5 @@ public class TurnoController {
         } else {
             System.out.println("No se encontró el turno con el ID: " + id);
         }
-    }
-
-    public List<Turno> listarPorFecha(LocalDate fechaBuscada) {
-
-        List<Turno> lista = cp.buscarTodosLosTurno();
-        List<Turno> listaFiltrada = lista.stream()
-                .filter(t -> t.getFecha().equals(fechaBuscada)).toList();
-        System.out.println("Listado de turnos por fecha:" + fechaBuscada );
-        listaFiltrada.forEach(System.out::println);
-        return listaFiltrada;
-    }
-
-    public List<Turno> listarPorEstado(String estado) {
-
-        List<Turno> lista = cp.buscarTodosLosTurno();
-        List<Turno> listaFiltrada = lista.stream()
-                .filter(t -> t.getEstado().equalsIgnoreCase(estado)).toList();
-        System.out.println("Listado de turnos por estado:" + estado );
-
-        listaFiltrada.forEach(System.out::println);
-        return listaFiltrada;
     }
 }
