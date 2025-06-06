@@ -1,7 +1,7 @@
     <nav class="menu">
         <div class="menu-header">
             <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-            <span class="titulo">Gestor de turnos</span>
+            <a href="/app" class="titulo">Gestor de turnos</a>
         </div>
 
         <ul class="nav-items">
