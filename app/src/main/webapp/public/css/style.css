@@ -111,18 +111,22 @@ input {
   border-radius: 5px;
   margin-top: 3px;
 }
+.contenedor-tabla-y-form {
+  width: 75%;
+  margin-left: 100px;
+}
 
 /* FORMULARIO DE BÚSQUEDA */
 form.search {
-  margin-left: auto;
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
   gap: 15px;
-  border-radius: 8px;
-  padding-left: 750px;
-  padding-bottom: 30px;
+  margin-bottom: 20px;
 }
-
+.contenedor-principal {
+  max-width: 1000px;  /* el mismo ancho de la tabla */
+  margin: 0 auto;     /* centra todo horizontalmente */
+}
 form.search input {
   border: 2px solid #0056b3;
   border-radius: 5px;
