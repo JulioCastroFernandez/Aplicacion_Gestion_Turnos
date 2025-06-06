@@ -2,13 +2,16 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
 
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
 /* MENU HEADER */
 .menu-header {
   display: flex;
-  align-items: center;
+  align-items: right;
   gap: 15px;
   padding: 0 20px;
   margin-top: 20px;
@@ -25,14 +28,14 @@
 /* MENU PRINCIPAL */
 .menu {
   height: 60px;
+  padding:0 px
   position: relative;
   z-index: 100;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   font-weight: bold;
   font-size: 18px;
-  padding: 0 50px 0 3px;
   background-color: rgb(130, 135, 238);
 }
 
@@ -41,30 +44,27 @@
   font-weight: 700;
   color: #ffeb3b;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  margin-right: 4px;
+  margin-right: 20px;
   user-select: none;
 }
 
 .menu ul {
   list-style: none;
   display: flex;
-  align-items: center;
   gap: 2px;
   padding: 0;
-  margin: 0;
+  margin: 70px;
 }
 
 .menu ul li {
   position: relative;
   z-index: 999;
-  min-width: 200px;
+  min-width: 250px;
 }
 
 .menu ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0 4px;
-  border-radius: 4px;
 }
 
 /* HOVER */
