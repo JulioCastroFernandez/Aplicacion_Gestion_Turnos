@@ -15,7 +15,7 @@
        String estadoSeleccionado = (String) request.getAttribute("estado");
    %>
    <select id="estado-turno" name="estado" class="select">
-       <option value="" disabled <%= (estadoSeleccionado == null || estadoSeleccionado.isBlank()) ? "selected" : "" %>>Estado turno</option>
+       <option value="" <%= (estadoSeleccionado == null || estadoSeleccionado.isBlank()) ? "selected" : "" %>>Estado turno</option>
        <option value="en espera" <%= "en espera".equals(estadoSeleccionado) ? "selected" : "" %>>en espera</option>
        <option value="ya atendido" <%= "ya atendido".equals(estadoSeleccionado) ? "selected" : "" %>>ya atendido</option>
    </select>
