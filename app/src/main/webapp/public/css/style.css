@@ -11,7 +11,6 @@ html, body {
 /* MENU HEADER */
 .menu-header {
   display: flex;
-  align-items: right;
   gap: 15px;
   padding: 0 20px;
   margin-top: 20px;
@@ -28,7 +27,6 @@ html, body {
 /* MENU PRINCIPAL */
 .menu {
   height: 60px;
-  padding:0 px
   position: relative;
   z-index: 100;
   display: flex;
@@ -121,6 +119,8 @@ form.search {
   align-items: center;
   gap: 15px;
   border-radius: 8px;
+  padding-left: 750px;
+  padding-bottom: 30px;
 }
 
 form.search input {
