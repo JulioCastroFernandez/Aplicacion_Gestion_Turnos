@@ -9,7 +9,7 @@
 <body>
  <%@include file ="partials/header.jsp" %>
 <main class="pagina-lista-turnos">
-  <h2 class="titulo" style="margin-left: 30px;">lista de turnos</h2>
+  <h2 class="titulo" style="margin-left: 30px;">Lista de turnos</h2>
         <form class="search" action="/app/busquedaForm" method="POST">
    <%
        String estadoSeleccionado = (String) request.getAttribute("estado");

@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Inicio</title>
+    <title>Nuevo ciudadano</title>
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
