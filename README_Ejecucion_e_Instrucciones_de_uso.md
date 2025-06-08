@@ -52,7 +52,15 @@ Ahora vamos a explicar cada opción por separado:
 
 Al hacer click, nos devuelve a la pantalla de inicio de la WebApp.
 
-**** 2. Turno ****
+**** 2. Ciudadano ****
+
+Al pasar el ratón por encima desplegara las dos opciones disponibles.
+
+a. Nuevo ciudadano: Al hacer click en esta opción accederemos al formulario para añadir a un nuevo ciudadano a la BD.
+
+b. Lista de ciudadanos: Al hacer click en esta opción accederemos a la lista de ciudadanos que hay en la BD.
+
+**** 3. Turno ****
 
 Al pasar el ratón por encima desplegara las dos opciones disponibles.
 
@@ -60,13 +68,6 @@ a. Nuevo turno: Al hacer click en esta opción accederemos al formulario para cr
 
 b. Lista de turnos: Al hacer click en esta opción accederemos a la lista de turnos que hay en la BD.
 
-**** 3. Ciudadano ****
-
-Al pasar el ratón por encima desplegara las dos opciones disponibles.
-
-a. Nuevo ciudadano: Al hacer click en esta opción accederemos al formulario para añadir a un nuevo ciudadano a la BD.
-
-b. Lista de ciudadanos: Al hacer click en esta opción accederemos a la lista de ciudadanos que hay en la BD.
 
 
 
