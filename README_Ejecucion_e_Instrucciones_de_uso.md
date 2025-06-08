@@ -40,11 +40,11 @@ http://localhost:8080/
 
 ---- Cómo utilizar la WebApp "Gestión de turnos" ----
 
-Una vez accedas a la WebApp te encontraras con al pantalla inicio. La pantalla inicio consta de las siguientes opciones:
+Una vez accedas a la WebApp te encontraras con la pantalla inicio y las siguientes opciones:
 
-1. Inicio (Te devuelve a la pantalla inicio).
-2. Turno (Al pasar por encima despliega las opciones "Nuevo turno" y "Lista de turnos").
-3. Ciudadano (Al pasar por encima despliega las opciones "Nuevo ciudadano" y "Lista de ciudadanos").
+1. Inicio. 
+2. Turno. 
+3. Ciudadano.
 
 Ahora vamos a explicar cada opción por separado:
 
