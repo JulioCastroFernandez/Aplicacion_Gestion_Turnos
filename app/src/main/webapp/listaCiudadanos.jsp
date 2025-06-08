@@ -10,7 +10,7 @@
  <%@include file ="partials/header.jsp" %>
     <!-- Menú de navegación -->
 <main class="pagina-lista-ciudadanos">
-  <h2 class="titulo" style="margin-left: 30px;">lista de ciudadanos</h2>
+  <h2 class="titulo" style="margin-left: 30px;">Lista de ciudadanos</h2>
 
   <table style="width: 75%; border-collapse: collapse; margin-left: 100px;">
        <thead style="background-color: rgb(130, 135, 238); color: #fff;">
