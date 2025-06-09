@@ -17,7 +17,7 @@ Requisitos e instrucciones para poder ejecutar la aplicación correctamente en t
 2. Entra a [phpMyAdmin](http://localhost/phpmyadmin) o MySQL Workbench.
 3. Crea una base de datos llamada:  
    
-	"gestionturnos_bd"	
+	"gestionturno_bd"	
 
 4. No es necesario crear tablas, ya que se generarán automáticamente mediante JPA al iniciar la aplicación.
 
