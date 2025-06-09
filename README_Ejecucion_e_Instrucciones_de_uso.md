@@ -40,11 +40,11 @@ http://localhost:8080/
 
 ---- Cómo utilizar la WebApp "Gestión de turnos" ----
 
-Una vez accedas a la WebApp te encontraras con al pantalla inicio. La pantalla inicio consta de las siguientes opciones:
+Una vez accedas a la WebApp te encontraras con la pantalla inicio y las siguientes opciones:
 
-1. Inicio (Te devuelve a la pantalla inicio).
-2. Turno (Al pasar por encima despliega las opciones "Nuevo turno" y "Lista de turnos").
-3. Ciudadano (Al pasar por encima despliega las opciones "Nuevo ciudadano" y "Lista de ciudadanos").
+1. Inicio. 
+2. Turno. 
+3. Ciudadano.
 
 Ahora vamos a explicar cada opción por separado:
 
@@ -52,7 +52,15 @@ Ahora vamos a explicar cada opción por separado:
 
 Al hacer click, nos devuelve a la pantalla de inicio de la WebApp.
 
-**** 2. Turno ****
+**** 2. Ciudadano ****
+
+Al pasar el ratón por encima desplegara las dos opciones disponibles.
+
+a. Nuevo ciudadano: Al hacer click en esta opción accederemos al formulario para añadir a un nuevo ciudadano a la BD.
+
+b. Lista de ciudadanos: Al hacer click en esta opción accederemos a la lista de ciudadanos que hay en la BD.
+
+**** 3. Turno ****
 
 Al pasar el ratón por encima desplegara las dos opciones disponibles.
 
@@ -60,13 +68,6 @@ a. Nuevo turno: Al hacer click en esta opción accederemos al formulario para cr
 
 b. Lista de turnos: Al hacer click en esta opción accederemos a la lista de turnos que hay en la BD.
 
-**** 3. Ciudadano ****
-
-Al pasar el ratón por encima desplegara las dos opciones disponibles.
-
-a. Nuevo ciudadano: Al hacer click en esta opción accederemos al formulario para añadir a un nuevo ciudadano a la BD.
-
-b. Lista de ciudadanos: Al hacer click en esta opción accederemos a la lista de ciudadanos que hay en la BD.
 
 
 
